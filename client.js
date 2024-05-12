@@ -8,7 +8,7 @@ client.on('start', async (msg) => {
 console.log(JSON.stringify(msg,null,2))
     const chatId = msg?.chat?.id ? msg.chat.id : msg?.type === 'callback_query' && msg?.from?.id ? msg?.from?.id : '' ;
     const username = msg?.chat?.first_name && msg?.chat?.last_name ?  msg.chat.first_name + ' ' + msg.chat.last_name : '';
-    client.sendMessage(chatId, `\n\n\`\`\`Baiscope.lk\`\`\`\n\nHey ${username},\n\tWelcome to the ${config.botname} ${config.shortdesk}\n\nSend me a search query or type @${config.botusername} for use inline search`);
+    client.sendMessage(chatId, `Hey ${username},\n\tWelcome to the ${config.botname} ${config.shortdesk}\n\nSend me a search query or type @${config.botusername} for use inline search`);
 });
 
 
