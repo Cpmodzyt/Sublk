@@ -74,7 +74,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
             totalPages = result.totalPages;
             if(data !== undefined && data.length !==0 ){
                 let buttons = [];
-                let text =  'Select a movie or episode from below : \n\nBaiscope.lk\n\n'
+                let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Baiscope.lk\`\`\`\n\n'
                 for (let s = 1; s <= data.length; s += 3) {
                     let buttonsub = [];
                     for (let index = 0; index < 3; index++) {
@@ -82,7 +82,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                         if (item !== undefined) {
                             const rand = generateRandomText(5)
                             searchData.push({ text : rand , link : item.link})
-                            text += `${s + index}. ${item.title.replace('[සිංහල උපසිරැසි සහිතව]','').replace('[BLURAY UPDATE]','').replace('[සිංහල උපසිරසි]','').replace('[සිංහල උපසිරසි සමඟ]','').trim()}\n`;
+                            text += `\`${s + index}.\` **${item.title.replace('[සිංහල උපසිරැසි සහිතව]','').replace('[BLURAY UPDATE]','').replace('[සිංහල උපසිරසි]','').replace('[සිංහල උපසිරසි සමඟ]','').trim()}**\n`;
                             buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                         }
                     }
@@ -108,7 +108,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
             if(messageId !== undefined || messageId !== null){
                 await client.bot.deleteMessage(chatId, messageId)
             }
-                // await client.sendMessage(chatId, `Select a movie or episode from below : `)
+                // await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                 return await client.sendMessage(chatId, text, {
                     parse_mode: 'Markdown',
                     reply_markup: { inline_keyboard: buttons }
@@ -127,7 +127,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
             totalPages = result.totalPages;
             if(data !== undefined && data.length !==0 ){
                 let buttons = [];
-                let text =  'Select a movie or episode from below : \n\nZoom.lk\n\n'
+                let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Zoom.lk\`\`\`\n\n'
                 for (let s = 1; s <= data.length; s += 3) {
                     let buttonsub = [];
                     for (let index = 0; index < 3; index++) {
@@ -135,7 +135,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                         if (item !== undefined) {
                             const rand = generateRandomText(5)
                             searchData.push({ text : rand , link : item.link})
-                            text += `${s + index}. ${item.title.replace('(සිංහල උපසිරැසි)','').replace('(Sinhala Subtitle)','').replace('සිංහල උපසිරැසි','').replace('Sinhala Subtitle','').trim()}\n`;
+                            text += `\`${s + index}.\` **${item.title.replace('(සිංහල උපසිරැසි)','').replace('(Sinhala Subtitle)','').replace('සිංහල උපසිරැසි','').replace('Sinhala Subtitle','').trim()}**\n`;
                             buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                         }
                     }
@@ -161,7 +161,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                 if(messageId !== undefined || messageId !== null){
                     await client.bot.deleteMessage(chatId, messageId)
                 }
-                 // await client.sendMessage(chatId, `Select a movie or episode from below : `)
+                 // await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                 return await client.sendMessage(chatId, text, {
                     parse_mode: 'Markdown',
                     reply_markup: { inline_keyboard: buttons }
@@ -180,7 +180,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
             totalPages = result.totalPages;
             if(data !== undefined && data.length !==0 ){
                 let buttons = [];
-                let text =  'Select a movie or episode from below : \n\nCineru.lk\n\n'
+                let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Cineru.lk\`\`\`\n\n'
                 for (let s = 1; s <= data.length; s += 3) {
                     let buttonsub = [];
                     for (let index = 0; index < 3; index++) {
@@ -188,7 +188,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                         if (item !== undefined) {
                             const rand = generateRandomText(5)
                             searchData.push({ text : rand , link : item.link})
-                            text += `${s + index}. ${item.title.replace(' | සිංහල උපසිරැසි සමඟ','').replace(' Sinhala Subtitles','').trim()}\n`;
+                            text += `\`${s + index}.\` **${item.title.replace(' | සිංහල උපසිරැසි සමඟ','').replace(' Sinhala Subtitles','').trim()}**\n`;
                             buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                         }
                     }
@@ -214,7 +214,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                 if(messageId !== undefined || messageId !== null){
                     await client.bot.deleteMessage(chatId, messageId)
                 }
-                // await client.sendMessage(chatId, `Select a movie or episode from below : `)
+                // await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                 return await client.sendMessage(chatId, text, {
                     parse_mode: 'Markdown',
                     reply_markup: { inline_keyboard: buttons }
@@ -239,7 +239,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
             totalPages = result.totalPages;
             if(data !== undefined && data.length !==0 ){
                 let buttons = [];
-                let text =  'Select a movie or episode from below : \n\nCineru.lk\n\n'
+                let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Cineru.lk\`\`\`\n\n'
                 for (let s = 1; s <= data.length; s += 3) {
                     let buttonsub = [];
                     for (let index = 0; index < 3; index++) {
@@ -247,7 +247,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                         if (item !== undefined) {
                             const rand = generateRandomText(5)
                             searchData.push({ text : rand , link : item.link})
-                            text += `${s + index}. ${item.title.replace(' | සිංහල උපසිරැසි සමඟ','').replace(' Sinhala Subtitles','').trim()}\n`;
+                            text += `\`${s + index}.\` **${item.title.replace(' | සිංහල උපසිරැසි සමඟ','').replace(' Sinhala Subtitles','').trim()}**\n`;
                             buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                         }
                     }
@@ -270,7 +270,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
               //buttons.push(pages)
             }
                 buttons.push([{ text: `Baiscope`, callback_data: `/search --bscope ${q}` },{ text: `Zoom`, callback_data: `/search --zoom ${q}` },{ text: `English`, callback_data: `/search --eng ${q}` }])
-              //  await client.sendMessage(chatId, `Select a movie or episode from below : `)
+              //  await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                 return await client.sendMessage(chatId, text, {
                     parse_mode: 'Markdown',
                     reply_markup: { inline_keyboard: buttons }
@@ -283,7 +283,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                 totalPages = result.totalPages;
                 if(data !== undefined && data.length !==0 ){
                     let buttons = [];
-                    let text =  'Select a movie or episode from below : \n\nBaiscope.lk\n\n'
+                    let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Baiscope.lk\`\`\`\n\n'
                     for (let s = 1; s <= data.length; s += 3) {
                         let buttonsub = [];
                         for (let index = 0; index < 3; index++) {
@@ -291,7 +291,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                             if (item !== undefined) {
                                 const rand = generateRandomText(5)
                                 searchData.push({ text : rand , link : item.link})
-                                text += `${s + index}. ${item.title.replace('[සිංහල උපසිරැසි සහිතව]','').replace('[BLURAY UPDATE]','').replace('[සිංහල උපසිරසි]','').replace('[සිංහල උපසිරසි සමඟ]','').trim()}\n`;
+                                text += `\`${s + index}.\` **${item.title.replace('[සිංහල උපසිරැසි සහිතව]','').replace('[BLURAY UPDATE]','').replace('[සිංහල උපසිරසි]','').replace('[සිංහල උපසිරසි සමඟ]','').trim()}**\n`;
                                 buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                             }
                         }
@@ -315,7 +315,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                 }
                 buttons.push([{ text: `Zoom`, callback_data: `/search --zoom ${q}` },{ text: `English`, callback_data: `/search --eng ${q}` },{ text: `Cineru`, callback_data: `/search --cineru ${q}` }])
                  
-                  //  await client.sendMessage(chatId, `Select a movie or episode from below : `)
+                  //  await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                     return await client.sendMessage(chatId, text, {
                         parse_mode: 'Markdown',
                         reply_markup: { inline_keyboard: buttons }
@@ -328,7 +328,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                     totalPages = result.totalPages;
                     if(data !== undefined && data.length !==0 ){
                         let buttons = [];
-                        let text =  'Select a movie or episode from below : \n\nZoom.lk\n\n'
+                        let text =  '__Select a movie or episode from below :__ \n\n\`\`\`Zoom.lk\`\`\`\n\n'
                         for (let s = 1; s <= data.length; s += 3) {
                             let buttonsub = [];
                             for (let index = 0; index < 3; index++) {
@@ -336,7 +336,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                                 if (item !== undefined) {
                                     const rand = generateRandomText(5)
                                     searchData.push({ text : rand , link : item.link})
-                                    text += `${s + index}. ${item.title.replace('(සිංහල උපසිරැසි)','').replace('(Sinhala Subtitle)','').replace('සිංහල උපසිරැසි','').replace('Sinhala Subtitle','').trim()}\n`;
+                                    text += `\`${s + index}.\` **${item.title.replace('(සිංහල උපසිරැසි)','').replace('(Sinhala Subtitle)','').replace('සිංහල උපසිරැසි','').replace('Sinhala Subtitle','').trim()}**\n`;
                                     buttonsub.push({ text: `${s + index}`, callback_data: `/sub ${rand}` });
                                 }
                             }
@@ -359,7 +359,7 @@ module.exports = ({client,msg,config,is_bot,sender,q,body,args,isOwner,chatId,in
                         //buttons.push(pages)
                     }
                         buttons.push([{ text: `Baiscope`, callback_data: `/search --bscope ${q}` },{ text: `Cineru`, callback_data: `/search --cineru ${q}` },{ text: `English`, callback_data: `/search --eng ${q}` }])
-                      //  await client.sendMessage(chatId, `Select a movie or episode from below : `)
+                      //  await client.sendMessage(chatId, `__Select a movie or episode from below :__ `)
                         return await client.sendMessage(chatId, text, {
                             parse_mode: 'Markdown',
                             reply_markup: { inline_keyboard: buttons }
