@@ -1,0 +1,20 @@
+{
+    "scripts": {
+      "start": "pm2 start client.js --deep-monitoring --attach --name sachibot",
+      "stop": "pm2 stop sachibot",
+      "restart": "pm2 restart sachibot"
+    },
+    "dependencies": {
+      "pm2": "^5.2.0",
+      "express": "latest",
+      "node-telegram-bot-api": "^0.65.1",
+      "events": "^3.3.0" ,
+      "axios": "^1.6.8",
+      "cheerio" : "latest",
+      "adm-zip" : "latest",
+      "unrar" : "latest",
+      "mime-types" : "latest",
+      "file-type" : "latest"
+    }
+  }
+  
