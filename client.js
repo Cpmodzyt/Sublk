@@ -1,6 +1,21 @@
 //client.js
 const TelegramClient = require('./index');
 const config = require('./config');
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+app.get('/', async(req, res) => {
+    try{
+     return res.status(200).send({ status : true, response : 'connected successfull!' });
+   
+    }catch(e){
+    return res.send({error:`${e}`})
+    }
+})
 const ownerUsernames = config.ownerUsernames.split(',')
 const client = new TelegramClient(config.bottoken);
 const { isValidUrl } = require('./lib/utils')
