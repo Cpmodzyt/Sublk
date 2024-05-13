@@ -1,6 +1,10 @@
 //index.js
 const EventEmitter = require('events');
 const TelegramBot = require('node-telegram-bot-api');
+ // <<==========PORTS===========>>
+        const express = require("express");
+        const app = express();
+        const port = process.env.PORT || 4000;
 
 process.env.NTBA_FIX_350 = true;
 
