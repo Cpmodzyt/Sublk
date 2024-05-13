@@ -1,8 +1,0 @@
-services:
-  # BLA-BOT web service
-  - type: worker
-    name: sublkbot
-    env: node.js
-    startCommand: npm start
-    buildCommand: yarn
-    plan: free
